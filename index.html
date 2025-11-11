@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Probit vs. Logit</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div class="container">
+  <h2>Simulador 3D: Probit vs. Logit</h2>
+  <p>
+    Explora la superficie de probabilidad para Probit y Logit con dos variables independientes ($X_1$ y $X_2$).
+  </p>
+  <p class="equation">
+    $P(Y=1) = \text{Función}(\beta_0 + \beta_1 X_1 + \beta_2 X_2)$
+  </p>
+  
+  <div class="model-toggle">
+    <label>Seleccionar Modelo:</label>
+    <button id="toggleProbit" class="active">Probit</button>
+    <button id="toggleLogit">Logit</button>
+  </div>
+  
+  <div class="controls">
+    <div class="slider-group">
+      <label for="beta0">Intercepto ($\beta_0$): <span id="beta0_val">0</span></label>
+      <input type="range" id="beta0" min="-5" max="5" step="0.1" value="0">
+    </div>
+    
+    <div class="slider-group">
+      <label for="beta1">Pendiente $X_1$ ($\beta_1$): <span id="beta1_val">1</span></label>
+      <input type="range" id="beta1" min="-2" max="2" step="0.1" value="1">
+    </div>
+    
+    <div class="slider-group">
+      <label for="beta2">Pendiente $X_2$ ($\beta_2$): <span id="beta2_val">1</span></label>
+      <input type="range" id="beta2" min="-2" max="2" step="0.1" value="1">
+    </div>
+  </div>
+  
+  <div id="probitChart3D" class="chart-container"></div>
+  
+  <div class="explanation-box">
+    <h3>🎓 Explicación Dinámica</h3>
+    <p id="model_desc"></p>
+    <p id="intercept_desc"></p>
+    <p id="slope1_desc"></p>
+    <p id="slope2_desc"></p>
+  </div>
+</div>
+<p> Autor: Dr. Adrián Eduardo Pech Quijano
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script><script  src="./script.js"></script>
+
+  </body>
+  
+</html>
