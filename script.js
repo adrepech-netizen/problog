@@ -87,7 +87,7 @@ function updateChart() {
     // Actualizar el gráfico
     Plotly.restyle(chartDiv, { z: [new_z_data] });
 
-    // --- Actualizar Explicaciones ---
+   // --- Actualizar Explicaciones ---
     modelDesc.innerHTML = `Estás visualizando el **Modelo ${currentModel.charAt(0).toUpperCase() + currentModel.slice(1)}**. Observa la sutil diferencia en las "colas" de la superficie respecto al otro modelo.`;
     interceptDesc.innerHTML = `<strong>&beta;<sub>0</sub> (${b0.toFixed(1)}):</strong> Un valor ${b0 > 0 ? "positivo" : "negativo"} de &beta;<sub>0</sub> ${b0 > 0 ? "desplaza la superficie hacia arriba" : "hacia abajo"}, cambiando la probabilidad base.`;
     
