@@ -89,13 +89,13 @@ function updateChart() {
 
     // --- Actualizar Explicaciones ---
     modelDesc.innerHTML = `Estás visualizando el **Modelo ${currentModel.charAt(0).toUpperCase() + currentModel.slice(1)}**. Observa la sutil diferencia en las "colas" de la superficie respecto al otro modelo.`;
-    interceptDesc.innerHTML = `<strong>$\beta_0$ (${b0.toFixed(1)}):</strong> Un valor ${b0 > 0 ? "positivo" : "negativo"} de $\beta_0$ ${b0 > 0 ? "desplaza la superficie hacia arriba" : "hacia abajo"}, cambiando la probabilidad base.`;
+    interceptDesc.innerHTML = `<strong>&beta;<sub>0</sub> (${b0.toFixed(1)}):</strong> Un valor ${b0 > 0 ? "positivo" : "negativo"} de &beta;<sub>0</sub> ${b0 > 0 ? "desplaza la superficie hacia arriba" : "hacia abajo"}, cambiando la probabilidad base.`;
     
     let b1_effect = b1 == 0 ? "no tiene efecto" : (b1 > 0 ? "aumenta la probabilidad" : "disminuye la probabilidad");
-    slope1Desc.innerHTML = `<strong>$\beta_1$ (${b1.toFixed(1)}):</strong> ${b1 > 0 ? "Una pendiente positiva" : (b1 < 0 ? "Una pendiente negativa" : "Una pendiente nula")} indica que a medida que $X_1$ aumenta, la probabilidad ${b1_effect}.`;
+    slope1Desc.innerHTML = `<strong>&beta;<sub>1</sub> (${b1.toFixed(1)}):</strong> ${b1 > 0 ? "Una pendiente positiva" : (b1 < 0 ? "Una pendiente negativa" : "Una pendiente nula")} indica que a medida que X1 aumenta, la probabilidad ${b1_effect}.`;
 
     let b2_effect = b2 == 0 ? "no tiene efecto" : (b2 > 0 ? "aumenta la probabilidad" : "disminuye la probabilidad");
-    slope2Desc.innerHTML = `<strong>$\beta_2$ (${b2.toFixed(1)}):</strong> ${b2 > 0 ? "Una pendiente positiva" : (b2 < 0 ? "Una pendiente negativa" : "Una pendiente nula")} indica que a medida que $X_2$ aumenta, la probabilidad ${b2_effect}.`;
+    slope2Desc.innerHTML = `<strong>&beta;<sub>2</sub> (${b2.toFixed(1)}):</strong> ${b2 > 0 ? "Una pendiente positiva" : (b2 < 0 ? "Una pendiente negativa" : "Una pendiente nula")} indica que a medida que X2 aumenta, la probabilidad ${b2_effect}.`;
 }
 
 // --- INICIALIZACIÓN DEL GRÁFICO ---
